@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Cryptocurrencies</string>
+    <string name="positive_button">Tentar Novamente</string>
+    <string name="negative_button">Cancelar</string>
+</resources>
