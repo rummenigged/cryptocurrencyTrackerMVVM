@@ -1,10 +1,12 @@
 package com.example.rummenigged.cryptocurrencytrackermvvm.domain.model;
 
+import android.support.annotation.NonNull;
+
 /**
  * Created by rummenigged on 22/01/18.
  */
 
-public class Cryptocurrency {
+public class Cryptocurrency implements Comparable<Cryptocurrency>{
 
     private String idCurrency;
 
@@ -87,5 +89,10 @@ public class Cryptocurrency {
 
     public void setPercentChance7d(Double percentChance7d) {
         this.percentChance7d = percentChance7d;
+    }
+
+    @Override
+    public int compareTo(@NonNull Cryptocurrency cryptocurrency) {
+        return this.price.compareTo(cryptocurrency.getPrice());
     }
 }
