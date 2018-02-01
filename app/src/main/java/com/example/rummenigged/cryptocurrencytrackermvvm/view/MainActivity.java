@@ -21,6 +21,7 @@ import android.widget.TextView;
 
 import com.example.rummenigged.cryptocurrencytrackermvvm.App;
 import com.example.rummenigged.cryptocurrencytrackermvvm.R;
+import com.example.rummenigged.cryptocurrencytrackermvvm.data.repository.MockCryptocurrencyRepository;
 import com.example.rummenigged.cryptocurrencytrackermvvm.domain.model.Cryptocurrency;
 import com.example.rummenigged.cryptocurrencytrackermvvm.domain.useCase.CryptocurrencyUseCase;
 import com.example.rummenigged.cryptocurrencytrackermvvm.util.DialogsFactory;
@@ -121,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
                         , new CryptocurrencyViewModel
                                 .CryptocurrencyViewModelFactory(
                                 new CryptocurrencyUseCase(
-                                        App.getCryptoCurrencyRepository()
+                                        new MockCryptocurrencyRepository()
                                 )))
                 .get(CryptocurrencyViewModel.class);
     }

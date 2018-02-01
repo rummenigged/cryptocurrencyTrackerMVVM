@@ -16,11 +16,11 @@ public class MockCryptocurrencyRepository implements CryptoCurrencyRepository {
 
     @Override
     public void getCryptocurrencyList(Callback<List<CryptocurrencyEntity>> callback) {
-//        callback.onResponse(CryptocurrencyMock.BuildCryptocurrencyList(10));
+        callback.onResponse(CryptocurrencyMock.BuildCryptocurrencyList(10));
     }
 
     @Override
     public void refreshCryptocurrencyList(Callback<List<CryptocurrencyEntity>> callback) {
-//        callback.onResponse(CryptocurrencyMock.BuildCryptocurrencyList(10));
+        callback.onResponse(CryptocurrencyMock.BuildCryptocurrencyList(10));
     }
 }
